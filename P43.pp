@@ -42,7 +42,6 @@ begin
   Primes[9] := 13;
   Primes[10] := 17;
 
-  C:= 0;
-  WriteLn(Count(''));
-  WriteLn(C);
+  Count('');
+
 end.

@@ -1,6 +1,6 @@
 program P104;
 uses
-  Math, sysutils;
+  Math, sysutils, dateutils;
 
 const
   P9 = 1000000000;
@@ -72,7 +72,11 @@ var
   i: Integer;
   n1, n2, n3: uInt64;
   r: Int64;
+  T1: TDateTime;
+
 begin
+  T1 := Now;
+
   i := 3;
 
   n1 := 1; n2 := 1;
@@ -83,7 +87,7 @@ begin
     n2 := n3;
     if HasAll(IntToStr(n3)) then
     begin
-      WriteLn(i, ': ', n3);
+//      WriteLn(i, ': ', n3);
 
       r := Select9(i);
       if HasAll(IntToStr(r)) then
@@ -95,5 +99,5 @@ begin
     Inc(i);
   end;
 
-  WriteLn('Here');
+  WriteLn('MS = ', MilliSecondsBetween(T1, Now));
 end.

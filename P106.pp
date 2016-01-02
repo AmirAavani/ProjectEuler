@@ -1,4 +1,5 @@
-{$O3}
+{O3}
+{$Mode OBJFPC}
 program P106;
 uses
   SysUtils, MatchingUnit, dateutils, Classes;

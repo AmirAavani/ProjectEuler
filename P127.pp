@@ -114,17 +114,7 @@ begin
     Rads_Indices[c] := c;
   end;
   Sort(0, MaxC, Rads, Rads_Indices);
-  WriteLn(Rads_Indices[MaxC]);
 
-  for ia := 0 to MaxC - 1 do
-  begin
-    if Rads[Rads_Indices[ia]] > Rads[Rads_Indices[ia + 1]] then
-    begin
-
-WriteLn(Rads[Rads_Indices[ia]], ':', Rads[Rads_Indices[ia + 1]] , ' ia :', ia);
-Exit;
-    end;
-    end;
   for c := 1 to MaxC do
     for ia := 0 to MaxC - 1 do
     begin
@@ -156,5 +146,5 @@ Exit;
   Factorizations.Free;
 
   WriteLn(Count, ' ', Sum);
-  WriteLn(' MS = ', MilliSecondsBetween(Now, MS));
+  // WriteLn(' MS = ', MilliSecondsBetween(Now, MS));
 end.
